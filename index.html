@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="./styles.css">
+   
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class = "header_text"> kyaa tum budhu ho  </h1>
+            <h1 class = "header_text"> ? </h1>
+         </div>
+         <div class="gif_container">
+             <img src="https://www.bing.com/th/id/OGC.1b81614ca657b33c52f5d9fbe9659582?pid=1.7&rurl=https%3a%2f%2fi.pinimg.com%2foriginals%2fac%2f33%2f34%2fac3334193c924ae2d3bded7966ac0f36.gif&ehk=GOWtZmKOQGvfafFv2Y9y3ni1u7NefJd3MSttnWggM30%3d" alt="cute animated illustration">
+        </div>
+        <div class = "buttons">
+            <button class="btn" id= "yesButton" onclick="nextpage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+                function nextpage() {
+                    window.location.href = "yes.html";
+                }
+                function moveButton() {
+                     var i = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth)-85;
+                     var j = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight)-48;
+                     document.getElementById('noButton').style.left = `${i}px`;
+                     document.getElementById('noButton').style.top = `${j}px`;
+                 }
+             </script>
+         </div>
+     </div>
+  </body>
+</html>
